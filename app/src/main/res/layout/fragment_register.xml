@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.credentials.fragments.RegisterFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="0.5dp"
+        android:src="@drawable/account_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/image_view"
+        app:layout_constraintStart_toStartOf="@+id/image_view"
+        app:layout_constraintTop_toBottomOf="@+id/image_view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_et"
+            android:drawableRight="@drawable/account_circle"
+            android:layout_width="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_et"
+            android:drawableEnd="@drawable/email"
+            android:layout_width="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/vpn_key">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Confirm password"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/vpn_key">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:elevation="1dp"
+        android:text="Register"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
