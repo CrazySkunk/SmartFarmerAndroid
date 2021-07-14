@@ -44,7 +44,7 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
-        binding.imageView.setOnClickListener {
+        binding.imageViewRegister.setOnClickListener {
             if (isReadExternalStorageAllowed()) {
                 goToGallery()
             } else {
@@ -127,7 +127,7 @@ class RegisterFragment : Fragment() {
             try {
                 val bitmap =
                     MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, selectedImage)
-                binding.imageView.setImageBitmap(bitmap)
+                binding.imageViewRegister.setImageBitmap(bitmap)
             } catch (e: Exception) {
                 Log.e(TAG, "onActivityResult: Image not converted to bitmap")
             }

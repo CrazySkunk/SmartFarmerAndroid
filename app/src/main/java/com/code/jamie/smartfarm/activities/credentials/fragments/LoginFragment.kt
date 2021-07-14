@@ -1,14 +1,11 @@
 package com.code.jamie.smartfarm.activities.credentials.fragments
 
-import android.content.res.Resources.getSystem
 import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
-import com.code.jamie.smartfarm.R
 import com.code.jamie.smartfarm.databinding.FragmentLoginBinding
 import com.code.jamie.smartfarm.utils.Utilities
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

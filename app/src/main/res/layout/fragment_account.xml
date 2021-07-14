@@ -16,12 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_pic_account"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="20dp"
-            android:src="@drawable/account_circle"
+            android:src="@drawable/android_apps"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +65,7 @@
             android:fontFamily="casual"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Bio: Your bio goes her"
+            android:text="Bio: Your bio goes here"
             android:textColor="@color/white"
             android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/profile_pic_account"
@@ -83,14 +83,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.viewpager.widget.ViewPager
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/view_pager_my_pics"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 tools:stateListAnimator="@layout/pager_item"
                 android:layout_marginBottom="10dp"
                 android:clipToPadding="false"
-                android:stateListAnimator="@layout/pager_item" />
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/pager_item" />
 
 
             <TextView

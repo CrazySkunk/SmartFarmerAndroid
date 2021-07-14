@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.credentials.fragments.RegisterFragment">
+    android:layout_margin="20dp"
+    app:layout_constraintCircleRadius="20dp"
+    android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_view_register"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/image_view_dialog"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/account_circle"
         app:civ_border_color="@color/black"
         app:civ_border_width="0.5dp"
-        android:src="@drawable/account_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -27,17 +28,17 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Name"
-        app:layout_constraintEnd_toEndOf="@+id/image_view_register"
-        app:layout_constraintStart_toStartOf="@+id/image_view_register"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_register">
+        app:layout_constraintEnd_toEndOf="@+id/image_view_dialog"
+        app:layout_constraintStart_toStartOf="@+id/image_view_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_dialog">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_et"
-            android:drawableRight="@drawable/account_circle"
+            android:id="@+id/name_et_dialog"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/account_circle"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="wrap_content" />
+            android:paddingEnd="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,13 +53,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_et"
-            android:drawableEnd="@drawable/email"
+            android:id="@+id/email_et_dialog"
             android:layout_width="match_parent"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/email" />
+            android:drawableEnd="@drawable/email"
+            android:drawableRight="@drawable/email"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -75,44 +76,25 @@
         app:startIconDrawable="@drawable/vpn_key">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_et"
-            android:layout_width="match_parent"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Confirm password"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/vpn_key">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/confirm_password_et"
+            android:id="@+id/password_et_dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:inputType="textPassword" />
+            android:paddingEnd="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register"
+        android:id="@+id/submit_btn_dialog_acc"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:elevation="1dp"
-        android:text="Register"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
-
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

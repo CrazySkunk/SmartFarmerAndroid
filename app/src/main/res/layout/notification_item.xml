@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_marginTop="5dp"
     android:elevation="20dp"
+    android:paddingBottom="10dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
@@ -12,11 +13,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="#979292"
-
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/notification_title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -30,34 +30,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/notification_description_tv"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:ellipsize="end"
             android:fontFamily="casual"
-            android:maxEms="12"
-            android:text="This is ehere the description about the notification goes and all its details"
-            app:layout_constraintEnd_toStartOf="@+id/textView8"
+            android:layout_marginBottom="10dp"
+            android:text="This is where the description about the notification goes and all its details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/time_tv"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/notification_title_tv" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/time_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="10:00 am"
-            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_description_tv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="@+id/notification_description_tv" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/notify_iv"
             android:layout_width="30dp"
             android:layout_height="30sp"
             android:layout_margin="10dp"
